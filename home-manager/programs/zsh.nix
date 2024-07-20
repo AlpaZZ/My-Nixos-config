@@ -1,5 +1,6 @@
 {
-  enable = true;
+  programs.zsh = {
+    enable = true;
   enableVteIntegration = true;
   autosuggestion.enable = true;
   syntaxHighlighting = {
@@ -27,4 +28,6 @@
       p = "pnpm";
     };
   };
+  };
+  
 }

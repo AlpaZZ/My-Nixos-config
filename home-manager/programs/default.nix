@@ -1,10 +1,8 @@
 {
   imports = [
     ./git.nix
+    ./alacritty.nix
+    ./zsh.nix
+    ./direnv.nix
   ];
-  programs = {
-    alacritty = import ./alacritty.nix;
-    zsh = import ./zsh.nix;
-   # direnv = import ./direnv.nix;
-  };
 }
