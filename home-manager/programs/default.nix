@@ -6,7 +6,5 @@
     ./direnv.nix
     ./bash.nix
     ./tmux.nix
-    ./waybar.nix
-    ./hyprlock.nix
   ];
 }
