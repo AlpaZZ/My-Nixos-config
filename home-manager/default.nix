@@ -2,6 +2,9 @@
 {
   imports = [
     ./programs
+    ./wayland
+    ./gtk
+    ./nixpkgs
   ];
   home.username = "alpa";
   home.homeDirectory = "/home/alpa";
