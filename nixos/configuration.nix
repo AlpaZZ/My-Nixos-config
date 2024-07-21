@@ -1,37 +1,23 @@
-{ config, pkgs, inputs, ... }:
-
+# This is your system's configuration file.
+# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
-  imports =
-    [ 
-      ./hardware
-      ./boot
-      ./users
-      ./networking
-      ./time-zone
-      ./fonts
-      ./nixvim
-     # ./clean
-    ];
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  #services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-
-  vim
-  wget
-  vscode
-  microsoft-edge
-  lshw
+  imports = [
+    ./boot
+    ./nixpkgs
+    ./nix
+    ./networking
+    ./hardware
+    ./programs
+    ./services
+    ./security
+    ./users
+    ./environment
+    ./fonts
+    ./time
+    ./i18n
+    ./system
+    ./systemd
+    ./virtualization
+    ./stylix
   ];
-
-  system.stateVersion = "24.05"; 
 }

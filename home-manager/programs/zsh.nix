@@ -1,6 +1,5 @@
 {
-  programs.zsh = {
-    enable = true;
+  enable = true;
   enableVteIntegration = true;
   autosuggestion.enable = true;
   syntaxHighlighting = {
@@ -21,15 +20,11 @@
       lg = "lazygit";
       g = "git";
       t = "tmux";
-      rebuild = "sudo nixos-rebuild switch --flake .";
-      update = "sudo nix flake update";
+      rebuild = "sudo nixos-rebuild switch";
       sc = "sudo systemctl";
       scu = "systemctl --user";
       ar2 = "aria2c";
       p = "pnpm";
-      d = "cd .dotfiles";
     };
   };
-  };
-  
 }

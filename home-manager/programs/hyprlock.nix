@@ -1,6 +1,5 @@
 {
-  programs.hyprlock = {
-     enable = true;
+  enable = true;
   settings = {
     background = {
       path = "screenshot";
@@ -59,6 +58,5 @@
         valign = "bottom";
       }
     ];
-  };
   };
 }

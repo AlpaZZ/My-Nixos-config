@@ -1,5 +1,4 @@
 {
-  programs.waybar = {
   enable = true;
   systemd = {
     enable = true;
@@ -327,5 +326,4 @@
       background: #EBDBB2;
     }
   '';
-  };
 }
