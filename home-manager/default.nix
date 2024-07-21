@@ -2,7 +2,6 @@
 {
   imports = [
     ./programs
-    ./desktop
   ];
   home.username = "alpa";
   home.homeDirectory = "/home/alpa";

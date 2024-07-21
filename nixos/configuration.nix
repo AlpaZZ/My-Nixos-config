@@ -10,6 +10,7 @@
       ./time-zone
       ./fonts
       ./nixvim
+      ../desktop
     ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
