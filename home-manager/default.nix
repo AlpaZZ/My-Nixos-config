@@ -2,7 +2,7 @@
 {
   imports = [
     ./programs
-   # ./wayland
+    ./wayland
     ./gtk
     ./nixpkgs
   ];
