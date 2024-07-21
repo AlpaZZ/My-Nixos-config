@@ -21,11 +21,13 @@
       lg = "lazygit";
       g = "git";
       t = "tmux";
-      rebuild = "sudo nixos-rebuild switch";
+      rebuild = "sudo nixos-rebuild switch --flake .";
+      update = "sudo nix flake update"
       sc = "sudo systemctl";
       scu = "systemctl --user";
       ar2 = "aria2c";
       p = "pnpm";
+      d = "cd .dotfiles";
     };
   };
   };
