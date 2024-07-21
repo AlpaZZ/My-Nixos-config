@@ -5,5 +5,6 @@
     ./zsh.nix
     ./direnv.nix
     ./bash.nix
+    ./tmux.nix
   ];
 }
