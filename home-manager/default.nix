@@ -2,7 +2,7 @@
 {
   imports = [
     ./programs
-    ./wayland
+   # ./wayland
     ./gtk
     ./nixpkgs
   ];
@@ -10,4 +10,5 @@
   home.homeDirectory = "/home/alpa";
   home.stateVersion = "24.05"; 
   programs.home-manager.enable = true;
+  home-manager.enable = true;
 }
