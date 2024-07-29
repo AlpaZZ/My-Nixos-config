@@ -11,6 +11,7 @@
 
   # Import Program Configurations
   imports = [
+    ./nixpkgs
     ./programs
     ../config/emoji.nix
     ../config/hyprland.nix
