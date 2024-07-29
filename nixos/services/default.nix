@@ -65,8 +65,8 @@
   # Enable CUPS to document printings.
 
   # Bluetooth Support
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.
+  hardware.
   services.blueman.enable = true;
 
 
