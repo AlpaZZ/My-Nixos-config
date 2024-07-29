@@ -4,15 +4,12 @@
 }:
   
 {
-  # Home Manager Settings
-  home.username = "alpa";
-  home.homeDirectory = "/home/alpa";
-  home.stateVersion = "24.05";
 
   # Import Program Configurations
   imports = [
     ./nixpkgs
     ./programs
+    ./home
     ../config/emoji.nix
     ../config/hyprland.nix
     ../config/neovim.nix

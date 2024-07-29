@@ -1,66 +1,7 @@
 {pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    nautilus
-    gnome.file-roller
-    microsoft-edge
-    vim
-    vscode
-    wget
-    killall
-    eza
-    git
-    cmatrix
-    lolcat
-    fastfetch
-    htop
-    brave
-    libvirt
-    lxqt.lxqt-policykit
-    lm_sensors
-    unzip
-    unrar
-    libnotify
-    v4l-utils
-    ydotool
-    duf
-    ncdu
-    wl-clipboard
-    pciutils
-    ffmpeg
-    socat
-    cowsay
-    ripgrep
-    lshw
-    bat
-    pkg-config
-    meson
-    hyprpicker
-    ninja
-    brightnessctl
-    virt-viewer
-    swappy
-    appimage-run
-    networkmanagerapplet
-    yad
-    inxi
-    playerctl
-    nh
-    nixfmt-rfc-style
-    discord
-    libvirt
-    swww
-    grim
-    slurp
-    swaynotificationcenter
-    imv
-    mpv
-    gimp
-    pavucontrol
-    tree
-    spotify
-    neovide
-    greetd.tuigreet
+
   ];
 
 }
