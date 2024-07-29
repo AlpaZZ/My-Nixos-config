@@ -2,9 +2,7 @@
   pkgs,
   ...
 }:
-  
 {
-
   # Import Program Configurations
   imports = [
     ./nixpkgs
@@ -60,12 +58,6 @@
       uris = [ "qemu:///system" ];
     };
   };
-
-  # Styling Options
-  stylix.targets.waybar.enable = false;
-  stylix.targets.rofi.enable = false;
-  stylix.targets.hyprland.enable = false;
-
 
   # Scripts
   home.packages = [
