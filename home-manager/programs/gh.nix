@@ -1,5 +1,5 @@
 {
   programs.gh = {
-      gh.enable = true;
+      enable = true;
   };
 }
