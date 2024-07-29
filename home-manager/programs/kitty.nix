@@ -1,8 +1,6 @@
 {
   programs.kitty = {
-      kitty = {
       enable = true;
-      package = pkgs.kitty;
       settings = {
         scrollback_lines = 2000;
         wheel_scroll_min_lines = 1;
@@ -15,6 +13,5 @@
         active_tab_font_style   bold
         inactive_tab_font_style bold
       '';
-    };
   };
 }
