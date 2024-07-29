@@ -4,7 +4,6 @@
     nautilus
     gnome.file-roller
     microsoft-edge
-    alacritty
     vim
     vscode
     wget

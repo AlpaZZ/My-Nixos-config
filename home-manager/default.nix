@@ -11,6 +11,7 @@
 
   # Import Program Configurations
   imports = [
+    ./programs
     ../config/emoji.nix
     ../config/hyprland.nix
     ../config/neovim.nix
@@ -50,17 +51,6 @@
     fill_shape=false
   '';
 
-  # Install & Configure Git
-  programs.git= {
-    enable = true;
-      userName = "AlpaZZ";
-      userEmail = "alfarizki1810@gmail.com";
-  extraConfig = {
-    init.defaultBranch = "master";
-    color.ui = "auto";
-    safe.directory = "/etc/nixos";
-  };
-};
 
   # Create XDG Dirs
   xdg = {
@@ -146,100 +136,7 @@
   };
 
   programs = {
-    gh.enable = true;
-    btop = {
-      enable = true;
-      settings = {
-        vim_keys = true;
-      };
-    };
-    kitty = {
-      enable = true;
-      package = pkgs.kitty;
-      settings = {
-        scrollback_lines = 2000;
-        wheel_scroll_min_lines = 1;
-        window_padding_width = 4;
-        confirm_os_window_close = 0;
-      };
-      extraConfig = ''
-        tab_bar_style fade
-        tab_fade 1
-        active_tab_font_style   bold
-        inactive_tab_font_style bold
-      '';
-    };
-    bash = {
-      enable = true;
-      enableCompletion = true;
-      profileExtra = ''
-        #if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        #  exec Hyprland
-        #fi
-      '';
-      initExtra = ''
-        fastfetch
-        if [ -f $HOME/.bashrc-personal ]; then
-          source $HOME/.bashrc-personal
-        fi
-      '';
-      shellAliases = {
-        sv = "sudo nvim";
-        zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";
-        ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
-        v = "nvim";
-        cat = "bat";
-        ls = "eza --icons";
-        ll = "eza -lh --icons --grid --group-directories-first";
-        la = "eza -lah --icons --grid --group-directories-first";
-        ".." = "cd ..";
-      };
-    };
+
     home-manager.enable = true;
-    hyprlock = {
-      enable = true;
-      settings = {
-        general = {
-          disable_loading_bar = true;
-          grace = 10;
-          hide_cursor = true;
-          no_fade_in = false;
-        };
-        background = [
-          {
-            path = "/home/alpa/Pictures/Wallpapers/zaney-wallpaper.jpg";
-            blur_passes = 3;
-            blur_size = 8;
-          }
-        ];
-        image = [
-          {
-            path = "/home/alpa/.config/face.jpg";
-            size = 150;
-            border_size = 4;
-            border_color = "rgb(0C96F9)";
-            rounding = -1; # Negative means circle
-            position = "0, 200";
-            halign = "center";
-            valign = "center";
-          }
-        ];
-        input-field = [
-          {
-            size = "200, 50";
-            position = "0, -80";
-            monitor = "";
-            dots_center = true;
-            fade_on_empty = false;
-            font_color = "rgb(CFE6F4)";
-            inner_color = "rgb(657DC2)";
-            outer_color = "rgb(0D0E15)";
-            outline_thickness = 5;
-            placeholder_text = "Password...";
-            shadow_passes = 2;
-          }
-        ];
-      };
-    };
   };
 }
