@@ -1,7 +1,8 @@
 {pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    firefox
+    nautilus
+    gnome.file-roller
     microsoft-edge
     alacritty
     vim
@@ -52,7 +53,6 @@
     swww
     grim
     slurp
-    gnome.file-roller
     swaynotificationcenter
     imv
     mpv
