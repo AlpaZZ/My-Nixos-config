@@ -3,11 +3,13 @@
   fonts = {
     packages = with pkgs; [
       # noto-fonts
+      noto-fonts-emoji
       noto-fonts-cjk
-      # noto-fonts-emoji
+      font-awesome   
+      material-icons
       corefonts
       # inter
-      # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
     # fontconfig = {
     #   defaultFonts = {
