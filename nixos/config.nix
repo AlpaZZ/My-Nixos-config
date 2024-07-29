@@ -20,10 +20,6 @@
     ./security
     ./system
     ./nixpkgs
-
+    ./hardware
   ];
-
-  
-
-
 }

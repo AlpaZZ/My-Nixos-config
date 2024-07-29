@@ -1,11 +1,11 @@
 # peripheral.nix for configuring other peripheral related like audio, input, etc.
 {config, pkgs, ...}:
-
 {
   imports = [
     ./pipewire.nix
     ./xdg.nix
   ];
+
   services = {
     tlp = import ./tlp.nix;
     xserver = {
@@ -15,6 +15,7 @@
         variant = "";
       };
     };
+
     greetd = {
       enable = true;
       vt = 3;
@@ -29,10 +30,12 @@
         };
       };
     };
+
     smartd = {
       enable = false;
       autodetect = true;
     };
+
     libinput.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
@@ -44,6 +47,7 @@
         # pkgs.hplipWithPlugin 
       ];
     };
+
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;
     avahi = {
@@ -51,6 +55,7 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+
     ipp-usb.enable = true;
     syncthing = {
       enable = false;
@@ -58,19 +63,8 @@
       dataDir = "/home/alpa";
       configDir = "/home/alpa/.config/syncthing";
     };
+    blueman.enable = true;
     rpcbind.enable = false;
     nfs.server.enable = false;
   };
-
-  # Enable CUPS to document printings.
-
-  # Bluetooth Support
-  hardware.
-  hardware.
-  services.blueman.enable = true;
-
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  security.polkit.enable = true;
-
 }
