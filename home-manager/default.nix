@@ -23,6 +23,10 @@
     ../config/wlogout.nix
   ];
 
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  stylix.targets.hyprland.enable = false;
+
   # Place Files Inside Home Directory
   home.file."Pictures/Wallpapers" = {
     source = ../config/wallpapers;
